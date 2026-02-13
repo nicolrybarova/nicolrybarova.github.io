@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podmořský svět mořské panny</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #6dd5fa, #2980b9);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Hero sekce */
+.hero {
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  animation: floatText 3s ease-in-out infinite;
+}
+
+.hero p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Obrázek */
+.hero img {
+  margin-top: 30px;
+  width: 350px;
+  max-width: 90%;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* Tlačítko */
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: #ff9de2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #ff6fd8;
+  transform: scale(1.05);
+}
+
+/* Animace */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Bubliny */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-120vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Vítej v podmořském království 🐚</h1>
+  <p>Objev kouzelný svět plný tajemství, perel a mořských víl.</p>
+  <img src="images/morska-panna.png" alt="Mořská panna">
+  <br>
+  <a href="#" class="button">Prozkoumat oceán</a>
+</div>
+
+<!-- Bubliny -->
+<div class="bubble" style="left:10%; width:40px; height:40px; animation-duration:12s;"></div>
+<div class="bubble" style="left:30%; width:25px; height:25px; animation-duration:9s;"></div>
+<div class="bubble" style="left:50%; width:35px; height:35px; animation-duration:14s;"></div>
+<div class="bubble" style="left:70%; width:20px; height:20px; animation-duration:8s;"></div>
+<div class="bubble" style="left:85%; width:30px; height:30px; animation-duration:11s;"></div>
+
+</body>
+</html>
